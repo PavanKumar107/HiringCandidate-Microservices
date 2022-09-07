@@ -38,7 +38,7 @@ public class HiringCandidateService implements IHiringCandidateService{
 //		Optional<AdminModel> isTokenPresent = adminRepository.findById(admId);
 //		if(isTokenPresent.isPresent()) {
 //			Optional<BankDetailsModel> isDetailsPresent=bankDetailsRepository.findById(bankDetailsId);
-		boolean isUserPresent = restTemplate.getForObject("http://localhost:8012/hiringcandidate/validateuser/" + token, Boolean.class);
+		boolean isUserPresent = restTemplate.getForObject("http://LMS-Admin:8067/admin/validateuser/" + token, Boolean.class);
 		if (isUserPresent) {
 			HiringCandidateModel hiringCandidateModel = new HiringCandidateModel(hiringCandidateDTO);
 //			if(isDetailsPresent.isPresent()) {
@@ -58,7 +58,7 @@ public class HiringCandidateService implements IHiringCandidateService{
 //		Long admId = tokenUtil.decodeToken(token);
 //		Optional<AdminModel> isTokenPresent = adminRepository.findById(admId);
 //		if(isTokenPresent.isPresent()) {
-		boolean isUserPresent = restTemplate.getForObject("http://localhost:8012/hiringcandidate/validateuser/" + token, Boolean.class);
+		boolean isUserPresent = restTemplate.getForObject("http://LMS-Admin:8067/admin/validateuser/" + token, Boolean.class);
 		if (isUserPresent) {
 			Optional<HiringCandidateModel> ishiringcandidatepresent = hiringCandidateRepository.findById(id);
 			if(ishiringcandidatepresent.isPresent()) {
@@ -91,7 +91,7 @@ public class HiringCandidateService implements IHiringCandidateService{
 //		Long admId = tokenUtil.decodeToken(token);
 //		Optional<AdminModel> isTokenPresent = adminRepository.findById(admId);
 //		if(isTokenPresent.isPresent()) {
-		boolean isUserPresent = restTemplate.getForObject("http://localhost:8012/hiringcandidate/validateuser/" + token, Boolean.class);
+		boolean isUserPresent = restTemplate.getForObject("http://LMS-Admin:8067/admin/validateuser/" + token, Boolean.class);
 		if (isUserPresent) {
 			List<HiringCandidateModel> getAllHiringCandidate = hiringCandidateRepository.findAll();
 			if(getAllHiringCandidate.size()>0) {
@@ -108,7 +108,7 @@ public class HiringCandidateService implements IHiringCandidateService{
 //		Long admId = tokenUtil.decodeToken(token);
 //		Optional<AdminModel> isTokenPresent = adminRepository.findById(admId);
 //		if(isTokenPresent.isPresent()) {
-		boolean isUserPresent = restTemplate.getForObject("http://localhost:8012/hiringcandidate/validateuser/" + token, Boolean.class);
+		boolean isUserPresent = restTemplate.getForObject("http://LMS-Admin:8067/admin/validateuser/" + token, Boolean.class);
 		if (isUserPresent) {
 			Optional<HiringCandidateModel> isDetailsPresent = hiringCandidateRepository.findById(id);
 			if(isDetailsPresent.isPresent()) {
